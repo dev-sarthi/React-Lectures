@@ -33,7 +33,7 @@ root.render(JsxHeading);
 
 // React Components
 // Class Based ->Old
-// Functional Component->New
+// Functional Component->New  `
 
 // Functional Component
 
