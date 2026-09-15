@@ -1,24 +1,7 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import Header from './Header'
+import RestaurantCard from './RestrauntCard'
 import './App.css'
 
-const Header = () => (
-  <div id='header'>
-    <div id='logo'>
-      <img src="https://media.istockphoto.com/id/2178701322/vector/food-delivery-icon-symbol-restaurant-service-emblem-logo.jpg?s=2048x2048&w=is&k=20&c=D8Z-_vGyvfVaKcjjXKLo7Q5tNpEicATAc6S_RURiN14=" alt="" />
-    </div>
-    <div id='nav-items'>
-      <ul>
-        <li>Home </li>
-        <li>About Us</li>
-        <li>Contact</li>
-        <li>Cart</li>
-      </ul>
-    </div>
-  </div>
-)
 
 const restaurants = [
   {
@@ -923,35 +906,20 @@ const restaurants = [
   }
 ];
 
-const RestaurantCard = ({ resdata }) => {
-  console.log(resdata);
-  return (
-    <div className='res-card'>
-      <img src={resdata.image} alt={resdata.name} />
-      <h3>{resdata.name}</h3>
-      <h4>{resdata.cuisines}</h4>
-      <h4>{resdata.location}</h4>
-      <h4>Rating: {resdata.rating}</h4>
-      <h4>{resdata.deliveryTime} Minutes</h4>
-    </div>
-
-  );
-};
-
 const Body = () => (
   <div className="body">
     <div className="search">
       Search
     </div>
     <div className="res-container">
-      {restaurants.map((restaurant) => {
-    return (  
-      <RestaurantCard
-        key={restaurant.id}
-        resdata={restaurant}
-      />
-    );
-  })}
+      {restaurants.map((element) => {
+        return (
+          <RestaurantCard
+            key={element.id}
+            resdata={element}
+          />
+        );
+      })}
     </div>
 
   </div>
