@@ -14,4 +14,4 @@ const RestaurantCard = ({ resdata }) => {
 };
 
 
-export default RestaurantCard
+export default RestaurantCard;

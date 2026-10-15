@@ -55,3 +55,12 @@ border: 1px solid black;
   gap: 20px;
   row-gap: 30px
 }
+.filter-btn{
+  background-color: rgb(247, 241, 222);
+  color: rgb(27, 8, 8);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
